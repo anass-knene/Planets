@@ -15,9 +15,9 @@ dotenv.config();
 
 const port = process.env.PORT || 4000;
 
-app.use(express.static(__dirname + "/backend/build"));
+app.use(express.static(__dirname + "/build"));
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/backend/build/index.html");
+  res.sendFile(__dirname + "/build/index.html");
 });
 
 app.use("/planets", PlanetsRoute);
